@@ -137,18 +137,17 @@ span{
     position:fixed;
     right:0px;
     top:60px;
-   width:300px;
-   height:600px;
-   background-color: #0071859d;
+   width:500px;
+   height:800px;
+   background-color: #007185;
 }
 
 .close {
     color: #fff;
     float: right;
-    margin: 0px 20px;
     font-size: 28px;
     font-weight: bold;
-    z-index:1;
+    z-index:2;
   }
   
   .close:hover,
@@ -214,7 +213,7 @@ span{
 }
 .box{
  /*   border: 2px solid black; */
-    height:400px;
+    height:450px;
     width:23%;
     background-color:white;
     /* padding:20px 0px 15px; */
@@ -281,6 +280,14 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+.foot-panel1 .scrolltotop1{
+    background-color: #37475a;
+    color:white;  
+    height:40px;
+    border:none;
+
+}
 .foot-panel2{
     background-color:#222f3d;
     color:white;
@@ -288,6 +295,7 @@ footer{
     display:flex;
     justify-content: space-evenly;
 }
+
 ul{
     margin-top: 20px;
 }
@@ -322,4 +330,22 @@ ul a{
 
 .coyright{
     padding-top:5px;
+}
+
+.cart-item{
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom:30px;
+}
+
+.cart-item img{
+    width:50px;
+    height:50px
+
+}
+
+.cart-item .removebtn{
+    width:60px;
+    height:30px;
+    margin:10px;
 }
