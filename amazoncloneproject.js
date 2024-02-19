@@ -9,7 +9,7 @@ let x = 0;
 // var cartData = [];
 
 let modal = document.querySelector(".mymodal");
-// let btn = document.querySelector(".addtocartbtn");
+let btn = document.querySelector(".addtocartbtn");
 let closebtn = document.querySelector(".close");
 
 let array = [{
@@ -180,6 +180,8 @@ function renderSubtotal(){
     subtotalEl.innerHTML = `
     Subtotal (${totalItems} items): $${totalPrice.toFixed(2)}
     `;
+    document.getElementById("c").innerText = totalItems;
+
 }
 
 function rendercartitems() {
@@ -189,10 +191,11 @@ function rendercartitems() {
     <div class="cart-item">
        <div class="item-info" onclick="removeitemfromcart(${item.id})">
            <img src="${item.image}" alt="${item.label}">
-           <h4>${item.label}</h4>
+          
        </div>
        <div class="unit-price">
-           <small>$</small>${item.price}
+       <h4>${item.label}</h4>
+        ₹ ${item.price}
        </div>
        <div class="units">
            <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
@@ -230,7 +233,11 @@ function removeitemfromcart(id){
    cart =  cart.filter((item)=> item.id !== id)
    updateCart();
 }
-// function add(index){
+ 
+function displaymodal(){
+    modal.style.display="block";
+}
+// funct ion add(index){
 //     let item = array[index];
 //     document.getElementById("c").innerText = x;
 //     x++;
